@@ -2,7 +2,7 @@
 Classic snake game, adapted for Arduino with LED matrix.
 
 # Parts
-Part Name            |       Ebay Link        |         Price | Note
+Part Name            |       Ardushop Link        |         Price | Note
 :------------------- | ---------------------- | ------------: | :------------------------------------------------
 Arduino Uno          | [Arduino UNO](https://ardushop.ro/ro/home/29-placa-de-dezvoltare-uno-r3.html?search_query=arduino+una&results=208) |  **27,04 lei** | Or [Arduino MEGA](https://ardushop.ro/ro/electronica/71-placa-de-dezvoltare-mega-2560-arduino-compatibil.html?search_query=arduino+mega&results=174)
 LED Matrix           | [Led Matrix](https://ardushop.ro/ro/home/409-matrice-led-uri-8x8-circuit-de-control.html?search_query=matrice+leduri&results=33) |  **15,89 lei** | MAX7219 controlled 8x8 LED Matrix or [Led Matrix](https://ardushop.ro/ro/home/95-matrice-led-uri-8x8-circuit-de-control.html?search_query=matrice+leduri&results=33)
