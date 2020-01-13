@@ -18,13 +18,13 @@ USB A-B 1m           | [USB A-B](https://ardushop.ro/ro/electronica/73-cablu-usb
 3. Copy-paste [the code](https://github.com/moldovanpaul75/snakegame) into Arduino IDE
 4. Wire everything up _(see the Wiring Diagram)_
 5. Connect your Arduino and select it in `Tools > Board` and `Tools > Port`
-6. Upload the code
-7. _(optional)_ Tweak the variables, explore the code :wink:
+6. Upload and enjoy
+7. Explore the code
 
-# Circuit Diagram
+# Circuit Diagram :tada:
 ![Image of Circuit Diagram](Screenshot_2.png)
 
-# Wiring diagram :tada:
+# Wiring diagram
 Pin           | Arduino NANO or UNO
 :------------ | :------------------
 Matrix CLK    | 11
