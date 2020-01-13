@@ -1,8 +1,5 @@
 # snakegame :snake:
 
-# Circuit Diagram
-![Image of Circuit Diagram](Screenshot_2.png)
-
 # Parts :balloon:
 Part Name            |       Ebay Link        |         Price | Note
 :------------------- | ---------------------- | ------------: | :------------------------------------------------
@@ -23,6 +20,9 @@ USB A-B 1m           | [USB A-B](https://ardushop.ro/ro/electronica/73-cablu-usb
 5. Connect your Arduino and select it in `Tools > Board` and `Tools > Port`
 6. Upload the code
 7. _(optional)_ Tweak the variables, explore the code :wink:
+
+# Circuit Diagram
+![Image of Circuit Diagram](Screenshot_2.png)
 
 # Wiring diagram :tada:
 Pin           | Arduino NANO or UNO
