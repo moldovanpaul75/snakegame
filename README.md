@@ -1,4 +1,5 @@
 # snakegame :snake:
+Classic snake game, adapted for Arduino with LED matrix.
 
 # Parts :balloon:
 Part Name            |       Ebay Link        |         Price | Note
