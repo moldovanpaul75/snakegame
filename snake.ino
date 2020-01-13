@@ -3,15 +3,6 @@
 // --------------------------------------------------------------- //
 // -------------------- supporting variables --------------------- //
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- //
-/*
- * schema
- * cerinte
- * specificatii
- * utilizare
- * explicatii hard+soft
- * 
- * 
- */
 
 unsigned char rowsDisplayA[8];
 unsigned char rowsDisplayB[8];
@@ -171,7 +162,7 @@ void setPixelToValue(int x, int y, bool on){
 void setPixel(int x, int y) {
   setPixelToValue(x, y, true);
 }
-
+//read and map joystick input
 void updateLoop(){
   time_ += deltaTime;
 
@@ -301,16 +292,21 @@ void updateSnakeGame(){
 
   timeSinceLastMove += deltaTime;
 
+  //set next dir to wichever input axis is greater
   if(inputX != 0 || inputY != 0){
+    //stick further on x than y
     if(abs(inputX) > abs(inputY)){
       int inputDirX = sign(inputX);
+      //dont allow dir reverse
       if(inputDirX != -dirX){ 
         nextDirX = inputDirX;
         nextDirY = 0;
       }
     }
     else{
+      //stick on y
       int inputDirY = sign(inputY);
+      //dont allow dir reverse
       if(inputDirY != -dirY){
         nextDirY = inputDirY;
         nextDirX = 0;
@@ -325,23 +321,26 @@ void updateSnakeGame(){
     dirX = nextDirX;
     dirY = nextDirY;
 
+    //new head position
     int newHeadX = x[0] + dirX;
     int newHeadY = y[0] + dirY;
 
+    //warp around
     newHeadX = (newHeadX >= width) ? 0 : newHeadX;
     newHeadX = (newHeadX < 0) ? width-1 : newHeadX;
     newHeadY = (newHeadY >= height) ? 0 : newHeadY;
     newHeadY = (newHeadY < 0) ? height-1 : newHeadY;
 
+    //update snake position
     for(int i=snakeLength - 1; i>0; i--){
       x[i] = x[i-1];
       y[i] = y[i-1];
-      
+      //check for self-collision
       if(newHeadX == x[i] && newHeadY == y[i]){
         gameOver = true;
       }
     }
-
+    //move head
     x[0] = newHeadX;
     y[0] = newHeadY;
 
@@ -350,6 +349,7 @@ void updateSnakeGame(){
       if(x[0] == foodX && y[0] == foodY){
         foodExists = false;
 
+        //add point to end of snake
         int nextPointDirX = -dirX;
         int nextPointDirY = -dirY;
         if(snakeLength > 1){
@@ -362,14 +362,15 @@ void updateSnakeGame(){
       }
     }
   }
-
+  //draw snake
   for(int i=0; i<snakeLength; i++){
     setPixel((int)x[i], (int)y[i]);
   }
-
+  //draw food
   if(foodExists){
     setPixel(foodX, foodY);
   }else{
+    //food spawning
     timeRemainingToNextFoodSpawn -= deltaTime;
     if(timeRemainingToNextFoodSpawn <= 0){
       placeFood();
@@ -381,6 +382,7 @@ void placeFood(){
   int numTiles = width * height;
   int randomIndex = random(0, numTiles);
 
+  //map of tiles occupied by snake
   bool tilesMap[numTiles] = {false};
   for(int i=0; i<snakeLength; i++){
     int snakeIndex = y[i] * width + x[i];
@@ -388,9 +390,11 @@ void placeFood(){
   }
 
   for(int i=0; i<numTiles; i++){
+    //cant spawn food here because the snake is here
     if(tilesMap[randomIndex] == true){
       randomIndex = (randomIndex+1)%numTiles;
     }else{
+      //can spawn here
       foodX = randomIndex % width;
       foodY = randomIndex / width;
       timeRemainingToNextFoodSpawn = random(foodSpawnMillisMin, foodSpawnMillisMax) / 1000.0;
