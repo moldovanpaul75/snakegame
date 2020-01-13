@@ -16,7 +16,7 @@ USB A-B 1m           | [USB A-B](https://ardushop.ro/ro/electronica/73-cablu-usb
 # Tutorial :loudspeaker:
 1. Get the parts, install [Arduino IDE](https://www.arduino.cc/en/Main/Software), install drivers for Arduino
 2. Install the `LedControl` library using Arduino IDE [Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc2)
-3. Copy-paste [the code](https://github.com/moldovanpaul75/snakegame) into Arduino IDE
+3. Copy-paste [the code](https://github.com/moldovanpaul75/snakegame/blob/master/snake.ino) into Arduino IDE
 4. Wire everything up _(see the Wiring Diagram)_
 5. Connect your Arduino and select it in `Tools > Board` and `Tools > Port`
 6. Upload and enjoy
