@@ -1,7 +1,7 @@
 # snakegame :snake:
 Classic snake game, adapted for Arduino with LED matrix.
 
-# Parts :balloon:
+# Parts
 Part Name            |       Ebay Link        |         Price | Note
 :------------------- | ---------------------- | ------------: | :------------------------------------------------
 Arduino Uno          | [Arduino UNO](https://ardushop.ro/ro/home/29-placa-de-dezvoltare-uno-r3.html?search_query=arduino+una&results=208) |  **27,04 lei** | Or [Arduino MEGA](https://ardushop.ro/ro/electronica/71-placa-de-dezvoltare-mega-2560-arduino-compatibil.html?search_query=arduino+mega&results=174)
@@ -13,7 +13,7 @@ Breadboard           | [Breadboard](https://ardushop.ro/ro/electronica/33-breadb
 USB A-B 1m           | [USB A-B](https://ardushop.ro/ro/electronica/73-cablu-usb-a-b-18m-arduino-mega-uno-imprimanta.html) |  **5,94 lei** | 
 **Total**            |                        | **97.07‬ lei** | 
 
-# Tutorial :loudspeaker:
+# Tutorial
 1. Get the parts, install [Arduino IDE](https://www.arduino.cc/en/Main/Software), install drivers for Arduino
 2. Install the `LedControl` library using Arduino IDE [Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc2)
 3. Copy-paste [the code](https://github.com/moldovanpaul75/snakegame/blob/master/snake.ino) into Arduino IDE
@@ -22,7 +22,7 @@ USB A-B 1m           | [USB A-B](https://ardushop.ro/ro/electronica/73-cablu-usb
 6. Upload and enjoy
 7. Explore the code
 
-# Circuit Diagram :tada:
+# Circuit Diagram 
 ![Image of Circuit Diagram](Screenshot_2.png)
 
 # Wiring diagram
